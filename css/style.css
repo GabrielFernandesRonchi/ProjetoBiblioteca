@@ -1,0 +1,238 @@
+/* Definição das variáveis de cor */
+:root {
+    --primaria: #f67f31; /* Cor primária */
+    --secundaria: #483D8D; /* Cor secundária */
+    --texto: #2f2f2f; /* Cor do texto */
+}
+
+/* Reset de margens, preenchimento, e configuração de caixa para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilização básica do corpo do documento */
+body {
+    font-family: "Open Sans", sans-serif; /* Escolha da fonte */
+    color: var(--texto); /* Cor do texto */
+}
+
+/* Estilização do cabeçalho */
+#cabecalho {
+    height: 80px; /* Altura do cabeçalho */
+    padding: 10px; /* Preenchimento interno */
+}
+
+#logotipo img {
+    max-width: 200px; /* Largura máxima do logotipo */
+}
+
+/* Estilização do menu de navegação */
+#menu ul {
+    display: flex; /* Exibição em linha dos itens */
+    justify-content: space-between; /* Espaçamento uniforme entre os itens */
+    font-size: 18px; /* Tamanho da fonte */
+    line-height: 60px; /* Altura da linha */
+}
+
+#menu ul li a {
+    color: var(--texto); /* Cor do texto */
+    font-weight: bold; /* Peso da fonte */
+    text-decoration: none; /* Remoção do sublinhado */
+}
+
+/* Estilização dos botões do cabeçalho */
+#botoesCabecalho {
+    text-align: right; /* Alinhamento à direita */
+    line-height: 50px; /* Altura da linha */
+}
+
+/* Estilização do banner */
+#banner {
+    position: relative; /* Define posição relativa para permitir a posição absoluta do overlay */
+    background: url("/img/banner.jpg"); /* Imagem de fundo */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-size: cover; /* Cobrir toda a área */
+    height: 300px; /* Altura do banner */
+    color: white; /* Cor do texto */
+    text-align: center; /* Alinhamento central */
+    display: flex; /* Exibição em linha */
+    align-items: center; /* Alinhamento vertical */
+}
+
+/* Estilização do overlay */
+#banner::before {
+    content: ""; /* Adiciona um conteúdo vazio */
+    position: absolute; /* Define posição absoluta */
+    top: 0; /* Alinha no topo */
+    left: 0; /* Alinha na esquerda */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+    z-index: 1; /* Coloca o overlay acima da imagem */
+}
+
+/* Estilização do texto sobre o banner */
+#banner > .container {
+    position: relative; /* Define posição relativa para os filhos */
+    z-index: 2; /* Coloca o conteúdo acima do overlay */
+}
+
+
+#banner h2 {
+    font-weight: bold; /* Peso da fonte */
+}
+
+#banner.banner-interno{
+    height: 200px ;
+}
+
+/* Estilização do formulário de pesquisa */
+#formPesquisa {
+    background: white; /* Fundo branco */
+    max-width: 600px; /* Largura máxima */
+    font-size: 20px; /* Tamanho da fonte */
+    margin: 0 auto; /* Margem automática */
+    color: var(--texto); /* Cor do texto */
+    padding: 5px; /* Preenchimento */
+    border-radius: 22px; /* Raio da borda */
+    height: 44px; /* Altura */
+}
+
+#formPesquisa form {
+    display: flex; /* Exibição em linha */
+    justify-content: center; /* Centralização horizontal */
+    align-items: center; /* Centralização vertical */
+}
+
+#formPesquisa form input {
+    border: none; /* Sem borda */
+    flex-grow: 1;
+}
+
+#formPesquisa form button {
+    border: none; /* Sem borda */
+    background-color: var(--secundaria); /* Cor de fundo secundária */
+    color: white; /* Cor do texto */
+    border-radius: 15px; /* Raio da borda */
+    padding: 2px 15px; /* Preenchimento */
+}
+
+#formPesquisa form i {
+    margin: 0 10px; /* Margem */
+}
+
+
+
+/* Estilização do título */
+.titulo{
+    border-left: 10px solid var(--secundaria); /* Borda esquerda */
+    margin-top: 50px; /* Margem superior */
+    height: 75px; /* Altura */
+    margin-bottom: 50px; /* Margem inferior */
+}
+
+.titulo h2 {
+    font-weight: bold; /* Peso da fonte */
+}
+
+/* Estilização das caixas de categoria */
+.boxCategoria {
+    text-align: center; /* Alinhamento central */
+    
+}
+
+.boxCategoria h3 {
+    font-size: 18px; /* Tamanho da fonte */
+    margin-top: 10px; /* Margem superior */
+    font-weight: bold; /* Peso da fonte */
+}
+
+
+/* Estilização das caixas de livros */
+.boxLivros {
+    text-align: center; /* Alinhamento central */
+}
+
+.boxLivros h3 {
+    font-size: 18px; /* Tamanho da fonte */
+    margin-top: 20px; /* Margem superior */
+    margin-bottom: 50px; /* Margem inferior */
+    line-height: 26px; /* Altura da linha */
+}
+
+.boxLivros img {
+    height: 200px; /* Altura */
+}
+
+#copyright{
+    text-align: center;
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+    height: 60px;
+    padding-top: 20px;
+    font-weight: bold;
+    
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+footer .col-md-3 h2,
+footer .col-md-3 ul li {
+  color: black; /* Define a cor preta para os títulos e itens de lista nas colunas de largura md-3 dentro do rodapé */
+}
+
+.imagem{
+ display: inline-block;
+ border: 2px solid var(--primaria);
+ border-radius: 50%;
+ padding: 16px;
+ text-align: center;
+ align-items: center;
+}
+
+.imagem img{
+    display: block;
+    width: 75px;
+    height: 75px;
+}
+
+.bottao{
+    outline: none;
+}
+
+.icones2{
+    color: blue;
+}
+
+.bottao:focus {
+    outline: none;
+  }
+  
+  .icones2 {
+    color: blue;
+  }
+
+.redesociais{
+    display: inline-block
+
+}
+
+
+.custom-btn-light-blue {
+    background-color: #58c6f1; /* Azul claro mais claro */
+
+  }
+ 
+  
+  .custom-icon-light-blue {
+    color: #fff; /* Ícone branco */
+  }
